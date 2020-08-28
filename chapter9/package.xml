@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>chapter9</name>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <description>Sample code from chapter 9 of "Programming Robots with ROS", by
     Quigley, Gerkey and Smart (O'Reilly Media, Inc.)</description>
 
