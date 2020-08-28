@@ -15,14 +15,13 @@ steps:
     image: osrf/ros:kinetic-desktop-full
     commands:
       - mkdir -p /home/ros_catkin_ws/src
-	  - cd /home/ros_catkin_ws/src
-	  - /bin/bash -c "source /opt/ros/kinetic/setup.bash; catkin_init_workspace"
-	  - cd /home/ros_catkin_ws
-	  - /bin/bash -c "source /opt/ros/kinetic/setup.bash; catkin_make"
-	  - echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
-	  - echo "source /home/ros_catkin_ws/devel/setup.bash" >> ~/.bashrc
-	  - echo "export ROS_PACKAGE_PATH=\${ROS_PACKAGE_PATH}:/home/ros_catkin_ws" >> ~/.bashrc
-	  - echo "export ROS_WORKSPACE=/home/ros_catkin_ws" >> ~/.bashrc
-      - catkin_make
-
-
+         - cd /home/ros_catkin_ws/src
+	 - /bin/bash -c "source /opt/ros/kinetic/setup.bash; catkin_init_workspace"
+	 - cd /home/ros_catkin_ws
+	 - /bin/bash -c "source /opt/ros/kinetic/setup.bash; catkin_make"
+	 - echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+	 - echo "source /home/ros_catkin_ws/devel/setup.bash" >> ~/.bashrc
+	 - echo "export ROS_PACKAGE_PATH=\${ROS_PACKAGE_PATH}:/home/ros_catkin_ws" >> ~/.bashrc
+	 - echo "export ROS_WORKSPACE=/home/ros_catkin_ws" >> ~/.bashrc
+	 - catkin_make
+	 
