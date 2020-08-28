@@ -7,16 +7,12 @@ platform:
   arch: amd64
 
 steps:
-  - name: init
+  - name: build
     image: osrf/ros:kinetic-desktop-full
     commands:
       - mkdir -p /home/catkin_ws/src
       - cd /home/catkin_ws/src
       - /bin/bash -c "source /opt/ros/kinetic/setup.bash; catkin_init_workspace"
-
-  - name: clone-build
-    image: drone/git
-    commands:
     - cd /home/catkin_ws/src
     - git clone https://github.com/bletest00001/ros_book_sample_code.git
     - cd ..
