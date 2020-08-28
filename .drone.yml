@@ -7,7 +7,7 @@ platform:
   arch: amd64
 
 workspace:
-  base: /work
+  base: /work1
   path: src/github.com/bletest00001/ros_book_sample_code
 
 steps:
