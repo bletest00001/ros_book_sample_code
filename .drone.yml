@@ -11,19 +11,17 @@ steps:
     image: osrf/ros:kinetic-desktop-full
     commands:
       - mkdir -p /home/catkin_ws/src
-	  - cd /home/catkin_ws/src
-	  - /bin/bash -c "source /opt/ros/kinetic/setup.bash; catkin_init_workspace"
+      - cd /home/catkin_ws/src
+      - /bin/bash -c "source /opt/ros/kinetic/setup.bash; catkin_init_workspace"
 
   - name: clone-build
     image: drone/git
     commands:
-	  - cd /home/catkin_ws/src
-      - git clone https://github.com/bletest00001/ros_book_sample_code.git
-      - cd ..
-	  - /bin/bash -c "source /opt/ros/kinetic/setup.bash; catkin_make"
-	  - echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
-	  - echo "source /home/catkin_ws/devel/setup.bash" >> ~/.bashrc
-	  - echo "export ROS_PACKAGE_PATH=\${ROS_PACKAGE_PATH}:/home/catkin_ws" >> ~/.bashrc
-	  - echo "export ROS_WORKSPACE=/home/catkin_ws" >> ~/.bashrc
-
-
+    - cd /home/catkin_ws/src
+    - git clone https://github.com/bletest00001/ros_book_sample_code.git
+    - cd ..
+    - /bin/bash -c "source /opt/ros/kinetic/setup.bash; catkin_make"
+    - echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+    - echo "source /home/catkin_ws/devel/setup.bash" >> ~/.bashrc
+    - echo "export ROS_PACKAGE_PATH=\${ROS_PACKAGE_PATH}:/home/catkin_ws" >> ~/.bashrc
+    - echo "export ROS_WORKSPACE=/home/catkin_ws" >> ~/.bashrc
